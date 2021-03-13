@@ -1,0 +1,39 @@
+A -> C_Movistar (DNI, CELULAR, NOMBRES)
+B -> C_Claro (DNI, CELULAR, NOMBRES,DIRECCION)
+
+TU ERES DE ENTEL :::
+-- NECESITAS HALLAR A LAS PERSONAS QUE TIENEN OPERADORES TANTO CLARO COMO MOVISTAR: 
+
+---> INTERSECCIÓN = INNER JOIN
+
+SELECT * 
+FROM C_MOVISTAR AS A
+INNER JOIN C_CLARO AS B ON A.DNI=B.DNI
+
+SELECT * 
+FROM C_MOVISTAR AS A
+INNER JOIN C_CLARO AS B ON A.DNI=B.DNI AND A.NOMBRES=B.NOMBRES
+
+SELECT * 
+FROM C_MOVISTAR AS A
+INNER JOIN C_CLARO AS B ON A.NOMBRES=B.NOMBRES
+
+
+--------------------------------------------------------------------------------  EJEMPLO DEL EXCEL - HOJA INNER JOIN  ---------------
+select p.IdProductom p.Nombre, p.IdCategoria, c.NombreCategoria
+from Productos as p
+inner join Categoria as c ON p.IdCategoria=c.IdCategoria
+
+
+
+
+
+
+
+
+
+
+
+
+
+
